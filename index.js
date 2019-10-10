@@ -3,7 +3,7 @@ const connectToChild = require('penpal/lib/connectToChild');
 class localstorageShare {
     init() {
         const iframe = document.createElement('iframe');
-        iframe.src = 'http://10.11.165.86:61140/';
+        iframe.src = 'https://browniu.github.io/localstorage-share/';
         iframe.style.display = 'none';
         document.body.appendChild(iframe);
 
