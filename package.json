@@ -9,6 +9,9 @@
     "build": "webpack",
     "deploy": "gh-pages -d iframe"
   },
+  "files": [
+    "dist"
+  ],
   "dependencies": {
     "penpal": "^4.1.1"
   },
