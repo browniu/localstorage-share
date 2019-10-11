@@ -73,7 +73,7 @@ lss.setItem('origin','From PageB')
 
 ### INIT
 `localstorageShare.init(serve:string)` 将[iframe](https://github.com/browniu/localstorage-share/blob/master/iframe/index.html) 部署到指定的服务器（如`www.example.com`），
-通过 `localstorageShare.init('www.example.com')`使用更加安全的个人共享服务
+通过 `localstorageShare.init('www.example.com')`使用更加安全的个人共享服务(实际上并没有数据安全问题，因为所以数据都保存在你本地的浏览器缓存中，没有任何上传服务器的操作)
 
 ```JavaScript
 import localstorageShare from 'localstorage-share';
