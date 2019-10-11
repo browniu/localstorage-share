@@ -65,10 +65,10 @@ lss.setItem('origin','From PageB')
 ## API
 
 ### GET
-`localstorageShare.getItem（key:string）` 类比 `localStorage.getItem`, 但获取的是本地共享存储中的数据
+`localstorageShare.getItem（key:string）` 类似于 `localStorage.getItem`, 但获取的是本地共享存储中的数据
 
 ### SET
-`localstorageShare.setItem（key:string,value:string）`类比`localStorage.setItem` ,但将数据保存到到本地共享存储中
+`localstorageShare.setItem（key:string,value:string）`类似于`localStorage.setItem` ,但将数据保存到到本地共享存储中
 
 ### REMOVE
 `localstorageShare.removeItem（key:string）` 清除本地共享储存中的指定数据
