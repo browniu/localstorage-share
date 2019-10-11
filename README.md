@@ -66,7 +66,7 @@ localstorageShare.setItem('origin','I from PageB')
 ### `localstorageShare.setItem（key:string,value:string）`
 类比`localStorage.setItem` ,但将数据保存到到本地共享存储中
 
-### `localstorageShare.init(serve)`
+### `localstorageShare.init(serve:string)`
 
 将[iframe](https://github.com/browniu/localstorage-share/blob/master/iframe/index.html) 部署到指定的服务器（如`www.example.com`），
 通过 `localstorageShare.init('www.example.com')`使用更加安全的个人共享服务
