@@ -37,6 +37,7 @@ localstorageShare.getItem(key)
 // pageA.index.js
 import lss from 'localstorage-share';
 
+lss.setItem('origin','From PageA')
 lss.getItem('origin')
 ```
 
