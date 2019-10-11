@@ -17,7 +17,9 @@ npm install --save localstorage-share
 
 If you don't want to use npm to manage client packages, localstorageShare also provides a UMD distribution in a `dist` folder which is hosted on a CDN:
 
-`<script src="https://unpkg.com/localstorage-share/dist/index.js"></script>`
+```html
+<script src="https://unpkg.com/localstorage-share/dist/index.js"></script>
+```
 
 localstorageShare will then be installed on `window.localstorageShare`. `window.localstorageShare` will contain the following properties:
 
