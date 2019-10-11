@@ -1,3 +1,4 @@
+/* eslint-disable */
 const connectToChild = require('penpal/lib/connectToChild');
 
 class localstorageShare {

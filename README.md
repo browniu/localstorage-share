@@ -31,7 +31,7 @@ localstorageShare.getItem(key)
 
 ## Usage
 
-### Page A
+### www.a.com
 ```JavaScript
 // pageA.index.js
 import localstorageShare from 'localstorage-share';
@@ -39,7 +39,7 @@ import localstorageShare from 'localstorage-share';
 localstorageShare.getItem('origin')
 ```
 
-### Page B
+### www.b.com
 ```JavaScript
 // pageB.index.js
 import localstorageShare from 'localstorage-share';
@@ -48,7 +48,7 @@ localstorageShare.getItem('origin')
 localstorageShare.setItem('origin','I from PageB')
 ```
 
-### Page C
+### www.c.com
 ```html
 <-!pageC.index.html->
 <script src="https://unpkg.com/localstorage-share/dist/index.js"></script>
