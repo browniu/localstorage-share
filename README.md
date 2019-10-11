@@ -36,7 +36,6 @@ localstorageShare.getItem(key)
 // pageA.index.js
 import localstorageShare from 'localstorage-share';
 
-localstorageShare.init()
 localstorageShare.getItem('origin')
 ```
 
@@ -45,7 +44,6 @@ localstorageShare.getItem('origin')
 // pageB.index.js
 import localstorageShare from 'localstorage-share';
 
-localstorageShare.init()
 localstorageShare.getItem('origin')
 localstorageShare.setItem('origin','I from PageB')
 ```

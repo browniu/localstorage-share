@@ -1,6 +1,7 @@
 const connectToChild = require('penpal/lib/connectToChild');
 
 class localstorageShare {
+
     init() {
         const iframe = document.createElement('iframe');
         iframe.src = 'https://browniu.github.io/localstorage-share/';
@@ -17,18 +18,21 @@ class localstorageShare {
     }
 
     getItem(key) {
+        if (!this.connection) this.init();
         this.connection.promise.then(child => {
             child.get(key)
         })
     }
 
     setItem(key, value) {
+        if (!this.connection) this.init();
         this.connection.promise.then(child => {
             child.set(key, value)
         })
     }
 
     clear() {
+        if (!this.connection) this.init();
         this.connection.promise.then(child => {
             child.clear()
         })
