@@ -24,7 +24,6 @@ If you don't want to use npm to manage client packages, localstorageShare also p
 localstorageShare will then be installed on `window.localstorageShare`. `window.localstorageShare` will contain the following properties:
 
 ```js
-localstorageShare.init()
 localstorageShare.setItem(key,value)
 localstorageShare.getItem(key)
 ```
@@ -62,10 +61,22 @@ localstorageShare.setItem('origin','I from PageB')
 
 ## API
 ### `localstorageShare.getItem（key:string）`
-same `localStorage.getItem`,get data from public storage
+类比 `localStorage.getItem`, 但获取的是本地共享存储中的数据
 
 ### `localstorageShare.setItem（key:string,value:string）`
-same `localStorage.setItem` ,but storage the data in shared storage
+类比`localStorage.setItem` ,但将数据保存到到本地共享存储中
+
+### `localstorageShare.init(serve)`
+
+将[iframe]() 部署到指定的服务器（如`www.example.com`），
+通过 `localstorageShare.init('www.example.com')`使用更加安全的个人共享服务
+
+```JavaScript
+import localstorageShare from 'localstorage-share';
+
+localstorageShare.init( 'www.example.com')
+localstorageShare.setItem('origin','from self serve')
+```
 
 ## License
 MIT © [browniu](https://github.com/browniu)
