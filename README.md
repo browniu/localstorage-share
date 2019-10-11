@@ -76,10 +76,10 @@ lss.setItem('origin','From PageB')
 通过 `localstorageShare.init('www.example.com')`使用更加安全的个人共享服务(实际上并没有数据安全问题，因为所以数据都保存在你本地的浏览器缓存中，没有任何上传服务器的操作)
 
 ```JavaScript
-import localstorageShare from 'localstorage-share';
+import lss from 'localstorage-share';
 
-localstorageShare.init( 'www.example.com')
-localstorageShare.setItem('origin','from self serve')
+lss.init( 'www.example.com')
+lss.setItem('origin','from self serve')
 ```
 
 ## License
