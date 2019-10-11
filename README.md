@@ -68,13 +68,13 @@ lss.setItem('origin','From PageB')
 `localstorageShare.getItem（key:string）` 类似于 `localStorage.getItem`, 但获取的是本地共享存储中的数据
 
 ### SET
-`localstorageShare.setItem（key:string,value:string）`类似于`localStorage.setItem` ,但将数据保存到到本地共享存储中
+`localstorageShare.setItem（key:string,value:string）` 类似于 `localStorage.setItem` ,但将数据保存到到本地共享存储中
 
 ### REMOVE
 `localstorageShare.removeItem（key:string）` 清除本地共享储存中的指定数据
 
 ### INIT
-`localstorageShare.init(serve:string)` 将[iframe](https://github.com/browniu/localstorage-share/blob/master/iframe/index.html) 部署到指定的服务器（如`www.example.com`），
+`localstorageShare.init(serve:string)` 将 [iframe](https://github.com/browniu/localstorage-share/blob/master/iframe/index.html) 部署到指定的服务器（如`www.example.com`），
 通过 `localstorageShare.init('www.example.com')`使用更加安全的个人共享服务(实际上并没有数据安全问题，因为所以数据都保存在你本地的浏览器缓存中，没有任何上传服务器的操作)
 
 ```JavaScript
