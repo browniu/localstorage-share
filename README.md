@@ -48,7 +48,7 @@ lss.getItem('origin')
 lss.setItem('origin','From PageB')
 ```
 
-### C站(UMD)
+### C站
 ```html
 <-!pageC.index.html->
 <script src="https://unpkg.com/localstorage-share/dist/index.js"></script>
