@@ -16,7 +16,7 @@ import localstorageShare from 'localstorage-share';
 
 ### Using a CDN
 
-If you don't want to use npm to manage client packages, localstorageShare also provides a UMD distribution in a `dist` folder which is hosted on a CDN:
+If you don't want to use npm to manage client packages, localstorageShare also provides a UMD distribution in a `dist` folder which is hosted on a CDN or [Download](https://github.com/browniu/localstorage-share/blob/master/dist/index.js):
 
 ```html
 <script src="https://unpkg.com/localstorage-share/dist/index.js"></script>
