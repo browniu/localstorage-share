@@ -8,10 +8,10 @@
 ### Using NPM
 
 ```bash
-npm install --save localstorage-share
+npm install localstorage-share
 ```
 ```JavaScript
-import localstorageShare from 'localstorage-share';
+import lss from 'localstorage-share';
 ```
 
 ### Using a CDN
