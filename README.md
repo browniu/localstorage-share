@@ -3,8 +3,6 @@
 
 [![NPM](https://img.shields.io/npm/v/localstorage-share.svg)](https://www.npmjs.com/package/react-autocomplete) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
-
-
 ## Install
 
 ### Using NPM
@@ -33,45 +31,48 @@ localstorageShare.getItem(key)
 
 ## Usage
 
-### www.a.com
+### A站
 ```JavaScript
 // pageA.index.js
-import localstorageShare from 'localstorage-share';
+import lss from 'localstorage-share';
 
-localstorageShare.getItem('origin')
+lss.getItem('origin')
 ```
 
-### www.b.com
+### B站
 ```JavaScript
 // pageB.index.js
-import localstorageShare from 'localstorage-share';
+import lss from 'localstorage-share';
 
-localstorageShare.getItem('origin')
-localstorageShare.setItem('origin','I from PageB')
+lss.getItem('origin')
+lss.setItem('origin','From PageB')
 ```
 
-### www.c.com
+### C站(UMD)
 ```html
 <-!pageC.index.html->
 <script src="https://unpkg.com/localstorage-share/dist/index.js"></script>
 
 <script>
     localstorageShare.getItem('origin')
-    localstorageShare.setItem('origin','I from PageC')
+    localstorageShare.setItem('origin','From PageC')
 </script>
 
 ```
 
 ## API
-### `localstorageShare.getItem（key:string）`
-类比 `localStorage.getItem`, 但获取的是本地共享存储中的数据
 
-### `localstorageShare.setItem（key:string,value:string）`
-类比`localStorage.setItem` ,但将数据保存到到本地共享存储中
+### GET
+`localstorageShare.getItem（key:string）` 类比 `localStorage.getItem`, 但获取的是本地共享存储中的数据
 
-### `localstorageShare.init(serve:string)`
+### SET
+`localstorageShare.setItem（key:string,value:string）`类比`localStorage.setItem` ,但将数据保存到到本地共享存储中
 
-将[iframe](https://github.com/browniu/localstorage-share/blob/master/iframe/index.html) 部署到指定的服务器（如`www.example.com`），
+### REMOVE
+`localstorageShare.removeItem（key:string）` 清除本地共享储存中的指定数据
+
+### INIT
+`localstorageShare.init(serve:string)` 将[iframe](https://github.com/browniu/localstorage-share/blob/master/iframe/index.html) 部署到指定的服务器（如`www.example.com`），
 通过 `localstorageShare.init('www.example.com')`使用更加安全的个人共享服务
 
 ```JavaScript

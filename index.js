@@ -35,6 +35,13 @@ class localstorageShare {
         })
     }
 
+    removeItem(key) {
+        if (!this.connection) this.init();
+        this.connection.promise.then(child => {
+            child.set(key, '')
+        })
+    }
+
     clear() {
         if (!this.connection) this.init();
         this.connection.promise.then(child => {
