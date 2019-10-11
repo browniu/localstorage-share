@@ -1,6 +1,6 @@
 # localStorage Share
 > *浏览器本地存储共享*
-引入后可以调用一个基于浏览器存储的公共存储空间，用于不同域的站点进行用户数据的共享
+> 引入后赋予调用一个本地公共存储空间的能力，用于不同域的站点进行用户数据的共享
 
 [![NPM](https://img.shields.io/npm/v/localstorage-share.svg)](https://www.npmjs.com/package/react-autocomplete) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
