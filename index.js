@@ -1,4 +1,3 @@
-/* eslint-disable */
 const connectToChild = require('penpal/lib/connectToChild');
 
 class localstorageShare {
@@ -15,16 +14,27 @@ class localstorageShare {
         this.connection = connectToChild({
             iframe, methods: {
                 get: (key, value) => {
-                    console.log(key, value)
+                    this.data = {[key]: value};
+                    console.log('LSS:', this.data);
                 }
             }
         })
     }
 
-    getItem(key) {
+    async getItem(key) {
         if (!this.connection) this.init();
-        this.connection.promise.then(child => {
+        await this.connection.promise.then(child => {
             child.get(key)
+        });
+        await this.delay();
+        return this.data
+    }
+
+    delay() {
+        return new Promise(resolve => {
+            setTimeout(() => {
+                resolve()
+            }, 50)
         })
     }
 

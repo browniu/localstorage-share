@@ -38,7 +38,12 @@ localstorageShare.getItem(key)
 import lss from 'localstorage-share';
 
 lss.setItem('origin','From PageA')
-lss.getItem('origin')
+
+(async () => {
+    const value = await lss.getItem('origin');
+    console.log('A站拿到的值', value)
+})();
+
 ```
 
 ### B站
@@ -46,8 +51,13 @@ lss.getItem('origin')
 // pageB.index.js
 import lss from 'localstorage-share';
 
-lss.getItem('origin')
+(async () => {
+    const value = await lss.getItem('origin');
+    console.log('B站拿到的值', value)
+})();
+
 lss.setItem('origin','From PageB')
+
 ```
 
 ### C站
@@ -56,7 +66,12 @@ lss.setItem('origin','From PageB')
 <script src="https://unpkg.com/localstorage-share/dist/index.js"></script>
 
 <script>
-    localstorageShare.getItem('origin')
+
+    (async () => {
+        const value = await localstorageShare.getItem('origin');
+        console.log('A站拿到的值', value)
+    })();
+    
     localstorageShare.setItem('origin','From PageC')
 </script>
 
@@ -65,10 +80,10 @@ lss.setItem('origin','From PageB')
 ## API
 
 ### GET
-`localstorageShare.getItem（key:string）` 类似于 `localStorage.getItem`, 但获取的是本地共享存储中的数据
+`localstorageShare.getItem（key:string）` 类似于 `localStorage.getItem`, 方法返回本地共享存储中的指定数据
 
 ### SET
-`localstorageShare.setItem（key:string,value:string）` 类似于 `localStorage.setItem` ,但将数据保存到到本地共享存储中
+`localstorageShare.setItem（key:string,value:string）` 类似于 `localStorage.setItem` ,方法将数据保存到到本地共享存储中，不返回值
 
 ### REMOVE
 `localstorageShare.removeItem（key:string）` 清除本地共享储存中的指定数据
