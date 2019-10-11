@@ -1,6 +1,6 @@
 {
   "name": "localstorage-share",
-  "version": "0.0.4",
+  "version": "0.0.5",
   "main": "dist/index.js",
   "repository": "https://github.com/browniu/localstorage-share.git",
   "author": "browniu <niuniusoga@qq.com>",
@@ -12,11 +12,9 @@
   "files": [
     "dist"
   ],
-  "dependencies": {
-    "penpal": "^4.1.1"
-  },
   "devDependencies": {
     "gh-pages": "^2.1.1",
+    "penpal": "^4.1.1",
     "webpack": "^4.41.0",
     "webpack-cli": "^3.3.9"
   }
