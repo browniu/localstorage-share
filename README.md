@@ -12,6 +12,9 @@
 ```bash
 npm install --save localstorage-share
 ```
+```JavaScript
+import localstorageShare from 'localstorage-share';
+```
 
 ### Using a CDN
 
