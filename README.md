@@ -1,5 +1,5 @@
 # localStorage Share
-> 浏览器本地存储共享方案
+> browser storage share 浏览器本地存储共享方案
 
 [![NPM](https://img.shields.io/npm/v/localstorage-share.svg)](https://www.npmjs.com/package/react-autocomplete) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
@@ -43,15 +43,15 @@ import localstorageShare from 'localstorage-share';
 
 localstorageShare.init()
 localstorageShare.getItem('origin')
-localstorageShare.setItem('origin','我来自B站')
+localstorageShare.setItem('origin','I from PageB')
 ```
 
 ## API
 ### `localstorageShare.getItem（key:string）`
-与 `localStorage.getItem` 功能类似，获取共享storage中的制定数据
+same `localStorage.getItem`,get data from public storage
 
 ### `localstorageShare.setItem（key:string,value:string）`
-与 `localStorage.setItem` 功能类似，但是把存储数据到共享storage中
+same `localStorage.setItem` ,but storage the data in shared storage
 
 ## License
 MIT © [browniu](https://github.com/browniu)
