@@ -2,7 +2,7 @@ const connectToChild = require('penpal/lib/connectToChild');
 
 class localstorageShare {
     constructor() {
-        this.serve = 'http://10.11.165.86:61140/'
+        this.serve = 'https://browniu.github.io/localstorage-share/'
     }
 
     init() {
