@@ -87,7 +87,13 @@ lss.setItem('origin','From PageB')
 | removeItem (key:string)           | 移除指定值           | {key:value} |
 | getItems ()                       | 获取当前存储中所有值 | {LSS:items} |
 | clear ()                          | 清空内存             | {LSS:items} |
+| init (serve:string)                          | 内存服务器的部署路径             | {LSS:items} |
 
+## 关于安全
+localStorageShare 默认没有域名限制，如果处于安全性考虑可以在`iframe`中定义一个白名单，并把它重新部署。
+```JavaScript
+
+```
 
 ## License
 MIT © [browniu](https://github.com/browniu)

@@ -12,7 +12,9 @@ class localstorageShare {
         iframe.src = this.serve;
         iframe.style.display = 'none';
         document.body.appendChild(iframe);
-        this.connection = connectToChild({iframe})
+        this.connection = connectToChild({
+            iframe, methods: {getOrigon:()=>{}}
+        })
     }
 
     getItem(key, callback) {

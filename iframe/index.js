@@ -1,10 +1,10 @@
-
 connectToParent({
     methods: {
         get: (key) => get(key),
         set: (key, value) => set(key, value),
         clear: () => clear(),
-        getAll: () => getAll()
+        getAll: () => getAll(),
+        origin: (origin) => testOrigin(origin)
     }
 });
 
@@ -29,4 +29,10 @@ function clear() {
 
 function getAll() {
     return JSON.parse(localStorage.getItem('storageShareCenter')) || {};
+}
+
+function testOrigin(origin) {
+    if (whiteList !== '*') {
+        if (!whiteList.indexOf(origin)) throw ('非合法域名')
+    }
 }
