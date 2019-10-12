@@ -1,6 +1,6 @@
 {
   "name": "localstorage-share",
-  "version": "0.1.0",
+  "version": "0.1.2",
   "main": "dist/index.js",
   "repository": "https://github.com/browniu/localstorage-share.git",
   "author": "browniu <niuniusoga@qq.com>",
@@ -10,7 +10,7 @@
     "deploy": "gh-pages -d iframe"
   },
   "files": [
-    "dist",
+    "dist/index.js",
     "README.md"
   ],
   "devDependencies": {

@@ -1,5 +1,5 @@
 
-Penpal.connectToParent({
+connectToParent({
     methods: {
         get: (key) => get(key),
         set: (key, value) => set(key, value),

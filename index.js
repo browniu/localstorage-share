@@ -1,4 +1,6 @@
 const connectToChild = require('penpal/lib/connectToChild');
+const connectToParent = require('penpal/lib/connectToParent');
+window.connectToParent = connectToParent;
 
 class localstorageShare {
     constructor() {
