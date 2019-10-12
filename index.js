@@ -2,61 +2,41 @@ const connectToChild = require('penpal/lib/connectToChild');
 
 class localstorageShare {
     constructor() {
-        this.serve = 'https://browniu.github.io/localstorage-share/'
+        this.serve = 'http://10.11.165.86:61140/'
     }
 
-    init(serve) {
+    init() {
         const iframe = document.createElement('iframe');
-        iframe.src = serve || this.serve;
+        iframe.src = this.serve;
         iframe.style.display = 'none';
         document.body.appendChild(iframe);
-
-        this.connection = connectToChild({
-            iframe, methods: {
-                get: (key, value) => {
-                    this.data = {[key]: value};
-                    console.log('LSS:', this.data);
-                }
-            }
-        })
+        this.connection = connectToChild({iframe})
     }
 
-    async getItem(key) {
+    getItem(key, callback) {
+        this.getCallback = callback;
         if (!this.connection) this.init();
-        await this.connection.promise.then(child => {
-            child.get(key)
-        });
-        await this.delay();
-        return this.data
-    }
-
-    delay() {
-        return new Promise(resolve => {
-            setTimeout(() => {
-                resolve()
-            }, 50)
-        })
+        return this.connection.promise.then(child => child.get(key));
     }
 
     setItem(key, value) {
         if (!this.connection) this.init();
-        this.connection.promise.then(child => {
-            child.set(key, value)
-        })
+        return this.connection.promise.then(child => child.set(key, value))
     }
 
     removeItem(key) {
         if (!this.connection) this.init();
-        this.connection.promise.then(child => {
-            child.set(key, '')
-        })
+        return this.connection.promise.then(child => child.set(key, ''))
     }
 
     clear() {
         if (!this.connection) this.init();
-        this.connection.promise.then(child => {
-            child.clear()
-        })
+        return this.connection.promise.then(child => child.clear())
+    }
+
+    getItems() {
+        if (!this.connection) this.init();
+        return this.connection.promise.then(child => child.getAll())
     }
 }
 

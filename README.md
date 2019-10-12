@@ -28,6 +28,7 @@ localstorageShare will then be installed on `window.localstorageShare`. `window.
 ```js
 localstorageShare.setItem(key,value)
 localstorageShare.getItem(key)
+//..
 ```
 
 ## Usage
@@ -79,25 +80,14 @@ lss.setItem('origin','From PageB')
 
 ## API
 
-### GET
-`localstorageShare.getItem（key:string）` 类似于 `localStorage.getItem`, 方法返回本地共享存储中的指定数据
+| API                               | Description          | Return      |
+| --------------------------------- | -------------------- | ----------- |
+| getItem (key:string)              | 获取值               | {key:value} |
+| setItem (key:string,value:string) | 设置值               | {key:value} |
+| removeItem (key:string)           | 移除指定值           | {key:value} |
+| getItems ()                       | 获取当前存储中所有值 | {LSS:items} |
+| clear ()                          | 清空内存             | {LSS:items} |
 
-### SET
-`localstorageShare.setItem（key:string,value:string）` 类似于 `localStorage.setItem` ,方法将数据保存到到本地共享存储中，不返回值
-
-### REMOVE
-`localstorageShare.removeItem（key:string）` 清除本地共享储存中的指定数据
-
-### INIT
-`localstorageShare.init(serve:string)` 将 [iframe](https://github.com/browniu/localstorage-share/blob/master/iframe/index.html) 部署到指定的服务器（如`www.example.com`），
-通过 `localstorageShare.init('www.example.com')`使用更加安全的个人共享服务(实际上并没有数据安全问题，因为所以数据都保存在你本地的浏览器缓存中，没有任何上传服务器的操作)
-
-```JavaScript
-import lss from 'localstorage-share';
-
-lss.init( 'www.example.com')
-lss.setItem('origin','from self serve')
-```
 
 ## License
 MIT © [browniu](https://github.com/browniu)

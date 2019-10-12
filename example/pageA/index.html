@@ -16,10 +16,14 @@
 </div>
 
 <script>
+
     (async () => {
         const value = await localstorageShare.getItem('origin');
-        console.log('A站拿到的值', value)
+        console.log('A站拿到的值', value);
+        console.log(await localstorageShare.setItem('info', 'hello world'));
+        console.log(await localstorageShare.getItems())
     })();
+
 </script>
 </body>
 </html>

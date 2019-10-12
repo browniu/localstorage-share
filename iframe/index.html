@@ -6,35 +6,9 @@
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <script src="https://unpkg.com/penpal/dist/penpal.min.js"></script>
+    <script src="index.min.js"></script>
     <title>LSS</title>
 </head>
 <body>
-<script>
-
-    const connection = Penpal.connectToParent({
-        methods: {
-            get: (key) => get(key),
-            set: (key, value) => set(key, value)
-        }
-    });
-
-    function get(key) {
-        const SSC = JSON.parse(localStorage.getItem('storageShareCenter')) || {};
-        const value = SSC[key];
-        connection.promise.then(parent => {
-            parent.get(key, value)
-        })
-    }
-
-    function set(key, value) {
-        const SSC = JSON.parse(localStorage.getItem('storageShareCenter')) || {};
-        SSC[key] = value;
-        localStorage.setItem('storageShareCenter', JSON.stringify(SSC))
-    }
-
-    function clear() {
-        localStorage.setItem('storageShareCenter', '')
-    }
-</script>
 </body>
 </html>
