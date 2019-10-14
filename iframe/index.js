@@ -3,22 +3,25 @@ connectToParent({
         get: (key) => get(key),
         set: (key, value) => set(key, value),
         clear: () => clear(),
-        getAll: () => getAll(),
-        origin: (origin) => testOrigin(origin)
+        getAll: () => getAll()
     }
 });
 
 function get(key) {
     const SSC = JSON.parse(localStorage.getItem('storageShareCenter')) || {};
     const value = SSC[key];
-    return {[key]: value};
+    return {
+        [key]: value
+    };
 }
 
 function set(key, value) {
     const SSC = JSON.parse(localStorage.getItem('storageShareCenter')) || {};
     SSC[key] = value;
     localStorage.setItem('storageShareCenter', JSON.stringify(SSC));
-    return {[key]: value}
+    return {
+        [key]: value
+    }
 }
 
 function clear() {

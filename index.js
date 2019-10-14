@@ -13,10 +13,7 @@ class localstorageShare {
         iframe.style.display = 'none';
         document.body.appendChild(iframe);
         this.connection = connectToChild({
-            iframe, methods: {
-                getOrigon: () => {
-                }
-            }
+            iframe
         })
     }
 
@@ -48,6 +45,3 @@ class localstorageShare {
 }
 
 module.exports = new localstorageShare();
-
-
-
