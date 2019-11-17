@@ -4,6 +4,9 @@
 
 [![NPM](https://img.shields.io/npm/v/localstorage-share.svg)](https://www.npmjs.com/package/react-autocomplete) [![JavaScript Style Guide](https://img.shields.io/badge/code_style-standard-brightgreen.svg)](https://standardjs.com)
 
+## [Demo](https://github.com/browniu/react-lss-autocomplete)
+![demo](./static/demo.gif)
+
 ## Install
 
 ### Using NPM
